@@ -51,3 +51,14 @@ git pull origin 브랜치명
 
 # 원격의 변경사항을 local에 가져오되 병합은 하지 않는것
 git fetch origin main
+
+# git 작업 취소
+# commit 이후의 취소
+git reset head~2
+git reset head^
+
+# staging area로 까지만 취소
+git reset --soft head~1
+
+# push 이후의 취소 -> commit메시지 작성 vi화면으로 이동 -> wq
+git revert 기존의커밋ID
